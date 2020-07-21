@@ -10,7 +10,7 @@ clean: check-env ## Remove release binaries
 	rm $(OBJECTS)
 
 $(OBJECTS): $(wildcard *.go)
-	env GOOS=`echo $@ | cut -d'-' -f2` GOARCH=`echo $@ | cut -d'-' -f3 | cut -d'.' -f 1` go build -o $@ $(LDFLAGS) github.com/wildberries-ru/go-curl-formatter
+	env GOOS=`echo $@ | cut -d'-' -f2` GOARCH=`echo $@ | cut -d'-' -f3 | cut -d'.' -f 1` go build -o $@ $(LDFLAGS) $(PACKAGE_NAME)
 
 .PHONY: help check-env
 

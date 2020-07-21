@@ -1,4 +1,4 @@
-module github.com/frankegoesdown/gcrequest
+module github.com/wildberries-ru/go-curl-formatter
 
 go 1.14
 
